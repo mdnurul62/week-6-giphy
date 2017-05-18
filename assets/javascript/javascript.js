@@ -75,17 +75,17 @@ toCreateTopicsButton();
             var p = $("<p>").text("Rating: " + rating);
             //console.log(p);
     //Creating a image tag
-            var topicImage = $("<img>");
+            var gifImage = $("<img>");
             //console.log(topicImage);
     //Giving the image tag an src attribute of a proprty pulled off the result item
-              topicImage.attr("src", results[i].images.fixed_height_still.url);
-              topicImage.attr("data-still", results[i].images.fixed_height_still.url);
-              topicImage.attr("data-animate", results[i].images.fixed_height.url);
-              topicImage.attr("data-state", "still");
+              gifImage.attr("src", results[i].images.fixed_height_still.url);
+              gifImage.attr("data-still", results[i].images.fixed_height_still.url);
+              gifImage.attr("data-animate", results[i].images.fixed_height.url);
+              gifImage.attr("data-state", "still");
               //console.log(gifDiv);
     // Appending the paragraph and topicImage we created to the "gifDiv" div we created.
               gifDiv.prepend(p);
-              gifDiv.prepend(topicImage);
+              gifDiv.prepend(gifImage);
               //console.log(topicImage);
 
             $("#topics-dump-here").prepend(gifDiv);
@@ -99,14 +99,14 @@ toCreateTopicsButton();
 
 
 $(".gifs").on("click", function() {
-      		var state = $(this).attr("data-state");
+      		var state = gifImage.attr("data-state");
 
       			if (state === "still") {
-        		    $(this).attr('src', $(this).attr("data-animate"));
-        		    $(this).attr('data-state', "animate");
+        		    gifImage.attr('src', gifImage.attr("data-animate"));
+        		    topicImage.attr('data-state', "animate");
       		} else  {
-       			    $(this).attr('src', $(this).attr("data-still"));
-        		    $(this).attr('data-state', "still");
+       			    gifImage.attr('src', gifImage.attr("data-still"));
+        		    gifImage.attr('data-state', "still");
       		}
 	});
 
