@@ -1,6 +1,5 @@
 .page-header {
 	background: lightblue;
-	padding: 4px;
 }
 
 h1 {
@@ -19,16 +18,11 @@ form {
 	margin-right: 5px;
 	margin-bottom: 8px;
 }
-.btn-primary {
-	float: right;
-	clear: both;
-}
-
 
 #topics-dump-here {
 	clear: both;
 	border: 1px solid black;
 }
-.gifs  {
+.gif  {
 	display: inline-block;
 }
